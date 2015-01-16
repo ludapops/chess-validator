@@ -195,7 +195,11 @@ class Bishop <Piece
 
     def move(final)
         decoded_final = decode(final)
-        if decoded_final[0] - @i_position[0] 
+        if (decoded_final[0] - @i_position[0]).abs == (decoded_final[1] - @i_position[1]).abs 
+        puts "leagal move"   
+        else
+            puts"ILLEGAL MOVE" 
+        end
     end
 end
 
@@ -225,6 +229,13 @@ end
 # # x.move("black", "a1")
 # # x.move("black", "b6")
 # # x.move("black", "c4")
+
+#x =Bishop.new("black", "c8")
+#x.move('d7')
+#x.move('b7')
+#x.move('c7')
+#x.move('c6')
+
 
 
 
